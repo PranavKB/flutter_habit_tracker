@@ -1,16 +1,52 @@
-# flutter_habit_tracker
+# Flutter Habit Tracker
 
-A new Flutter project.
+A **cross-platform Flutter app** to track any habit you want—health, fitness, work, or quitting bad habits. Built with **Provider** for state management and **SharedPreferences** for persistent storage.  
+
+---
+
+## Features
+
+- Add new habits with title & description  
+- Edit existing habits  
+- Swipe to delete habits  
+- Mark habits as completed  
+- View completion history  
+- Provider-based state management  
+- Persistent local storage using **SharedPreferences**  
+- Clean and responsive UI  
+
+---
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### 1. Clone the repository
+### 2. Install dependencies
+```bash
+flutter pub get
+```
+### 3. Run the app
+```bash
+flutter run
+```
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Usage
+### 1. Tap + to add a new habit
+### 2. Tap a habit to view details & history
+### 3. Tap the check icon to mark as completed
+### 4. Tap the edit icon to modify habit
+### 5. Swipe left/right to delete a habit
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## Future Improvements
+### Daily streak tracking
+### Habit reminders / notifications
+### Calendar view for completion history
+### Firebase sync for multi-device support
+### Dark mode & custom habit icons
+### Charts for habit progress
+
+
+
