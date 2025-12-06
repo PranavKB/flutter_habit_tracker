@@ -4,13 +4,17 @@ import 'dart:convert';
 import '../models/habit.dart';
 
 class HabitProvider with ChangeNotifier {
+  final SharedPreferences _prefs;
   List<Habit> _habits = [];
 
   List<Habit> get habits => _habits;
 
-  Future<void> loadHabits() async {
-    final prefs = await SharedPreferences.getInstance();
-    final data = prefs.getString("habits");
+  HabitProvider(this._prefs) {
+    _loadHabits();
+  }
+
+  void _loadHabits() {
+    final data = _prefs.getString("habits");
 
     if (data != null) {
       final decoded = json.decode(data) as List;
@@ -19,10 +23,9 @@ class HabitProvider with ChangeNotifier {
     }
   }
 
-  Future<void> saveHabits() async {
-    final prefs = await SharedPreferences.getInstance();
+  void saveHabits() {
     final encoded = json.encode(_habits.map((h) => h.toMap()).toList());
-    prefs.setString("habits", encoded);
+    _prefs.setString("habits", encoded);
   }
 
   void addHabit(Habit habit) {
